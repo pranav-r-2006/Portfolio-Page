@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Raleway', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: green;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: green;
+    border-bottom: 3px solid green;
+}
+
+section.skills-section {
+    padding: 18rem 9% 5rem;
+}
+
+.skills-section h1 {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    color: green;
+    text-shadow: 0 0 10px green;
+}
+
+.skill {
+    margin-bottom: 2rem;
+}
+
+.skill span {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: white;
+}
+
+.bar {
+    width: 100%;
+    height: 2.5rem;
+    background-color: #ddd;
+    border-radius: 3rem;
+    overflow: hidden;
+    box-shadow: 0 0 10px #555;
+}
+
+.fill {
+    height: 100%;
+    width: 0;
+    border-radius: 3rem;
+    transition: width 2s ease;
+}
+
+.green {
+    background-color: limegreen;
+    box-shadow: 0 0 20px limegreen;
+}
+
+.orange {
+    background-color: orange;
+    box-shadow: 0 0 20px orange;
+}
+
+.red {
+    background-color: red;
+    box-shadow: 0 0 20px red;
+}
+
+.closing-note {
+    margin-top: 4rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.8;
+    color: white;
+    text-align: center;
+}
+
+.closing-note span {
+    color: green;
+    font-weight: 600;
+}
+
+
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 10rem;
+    }
+}
+
+
+.skill {
+    margin: 20px 0;
+  }
+  
+  .bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 20px;
+  }
+  
+  .fill {
+    display: block;
+    height: 100%;
+    width: 0%;
+    animation: growBar 2s ease-out forwards;
+    border-radius: 20px;
+  }
+  
+  /* Add classes to specify width via animation delay */
+  .fill[data-width="75%"] { animation: growBar75 2s ease-out forwards; }
+  .fill[data-width="65%"] { animation: growBar65 2s ease-out forwards; }
+  .fill[data-width="60%"] { animation: growBar60 2s ease-out forwards; }
+  .fill[data-width="30%"] { animation: growBar30 2s ease-out forwards; }
+  .fill[data-width="26%"] { animation: growBar26 2s ease-out forwards; }
+  .fill[data-width="20%"] { animation: growBar20 2s ease-out forwards; }
+  .fill[data-width="45%"] { animation: growBar45 2s ease-out forwards; }
+  
+  /* Create keyframes for each percentage */
+  @keyframes growBar75 { from { width: 0%; } to { width: 75%; } }
+  @keyframes growBar65 { from { width: 0%; } to { width: 65%; } }
+  @keyframes growBar60 { from { width: 0%; } to { width: 60%; } }
+  @keyframes growBar30 { from { width: 0%; } to { width: 30%; } }
+  @keyframes growBar26 { from { width: 0%; } to { width: 26%; } }
+  @keyframes growBar20 { from { width: 0%; } to { width: 20%; } }
+  @keyframes growBar45 { from { width: 0%; } to { width: 45%; } }
+  
+  /* Color classes */
+  .green { background-color: #4caf50; }
+  .orange { background-color: #ff9800; }
+  .red { background-color: #f44336; }
+
+
+  /* Invisible trigger zone at bottom of page */
+.footer-trigger {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  /* Hidden footer initially */
+  .hidden-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease-in-out;
+    z-index: 9;
+    font-size: 1.4rem;
+  }
+  
+  /* Show footer on hover of trigger */
+  .footer-trigger:hover + .hidden-footer {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* Social icons styling */
+  .social-footer {
+    margin-top: 1rem;
+  }
+  
+  .social-footer a {
+    color: white;
+    margin: 0 0.8rem;
+    font-size: 2rem;
+    transition: color 0.3s;
+  }
+  
+  .social-footer a:hover {
+    color: green;
+  }
+
+
+
+  /* Media Queries for Universal Responsiveness */
+
+@media (max-width: 1024px) {
+    .skills-section {
+        padding: 15rem 6% 4rem;
+    }
+
+    .skills-section h1 {
+        font-size: clamp(2.8rem, 5vw, 3.8rem);
+    }
+
+    .skill span {
+        font-size: 1.8rem;
+    }
+
+    .closing-note {
+        font-size: 1.6rem;
+        padding: 0 2rem;
+    }
+
+    nav a {
+        font-size: 1.6rem;
+        margin-left: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 6%;
+        background-color: rgba(0, 0, 0, 0.85);
+    }
+
+    .logo {
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    nav a {
+        font-size: 1.4rem;
+        margin-left: 0;
+        margin-right: 1.2rem;
+    }
+
+    .skills-section {
+        padding-top: 13rem;
+    }
+
+    .bar {
+        height: 18px;
+    }
+
+    .closing-note {
+        font-size: 1.5rem;
+    }
+
+    .social-footer a {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-section h1 {
+        font-size: clamp(2.2rem, 6vw, 3.2rem);
+        text-align: center;
+    }
+
+    .skill span {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .bar {
+        height: 16px;
+    }
+
+    .fill {
+        border-radius: 10px;
+    }
+
+    .closing-note {
+        font-size: 1.4rem;
+    }
+
+    .footer-trigger {
+        height: 40px;
+    }
+
+    .hidden-footer {
+        font-size: 1.2rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .social-footer a {
+        font-size: 1.6rem;
+        margin: 0 0.5rem;
+    }
+}
+
+  

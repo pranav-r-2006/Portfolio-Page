@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Raleway', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 0 10px green;
+}
+
+.logo {
+    font-size: 3rem;
+    color: green;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: green;
+    border-bottom: 3px solid green;
+}
+
+.projects-section {
+    padding: 14rem 9% 5rem;
+}
+
+.projects-section h1 {
+    font-size: 4rem;
+    color: green;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px green;
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    color: limegreen;
+    text-shadow: 0 0 10px limegreen;
+}
+
+.section-title.upcoming {
+    color: orange;
+    text-shadow: 0 0 10px orange;
+}
+
+.project-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px green;
+}
+
+.project-card h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.project-card p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #ccc;
+}
+
+.badge {
+    display: inline-block;
+    background-color: dodgerblue;
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 12px;
+    font-size: 1.6rem;
+    margin-right: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.6rem;
+    color: white;
+    border-top: 1px solid green;
+    margin-top: 3rem;
+}
+
+/* Invisible trigger zone at bottom of page */
+.footer-trigger {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  /* Hidden footer initially */
+  .hidden-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease-in-out;
+    z-index: 9;
+    font-size: 1.4rem;
+  }
+  
+  /* Show footer on hover of trigger */
+  .footer-trigger:hover + .hidden-footer {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* Social icons styling */
+  .social-footer {
+    margin-top: 1rem;
+  }
+  
+  .social-footer a {
+    color: white;
+    margin: 0 0.8rem;
+    font-size: 2rem;
+    transition: color 0.3s;
+  }
+  
+  .social-footer a:hover {
+    color: green;
+  }
+
+
+
+  /* ========== Universal Responsiveness ========== */
+
+/* Mobile nav & header layout */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem 5%;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    nav a {
+        margin: 1rem 0;
+        font-size: 1.6rem;
+    }
+
+    .logo {
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Project section & card tweaks for tablets/mobiles */
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 12rem 5% 4rem;
+    }
+
+    .projects-section h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .project-card {
+        padding: 1.5rem;
+        border-radius: 15px;
+    }
+
+    .project-card h2 {
+        font-size: 2rem;
+    }
+
+    .project-card p {
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
+
+    .badge {
+        font-size: 1.4rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+    .social-footer a {
+        font-size: 1.8rem;
+    }
+
+    .hidden-footer {
+        font-size: 1.2rem;
+    }
+}
+
+/* Ultra-small devices (≤ 450px) */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+
+    .projects-section {
+        padding: 11rem 4% 3rem;
+    }
+
+    .project-card {
+        padding: 1.2rem;
+    }
+
+    .footer-trigger {
+        height: 40px;
+    }
+
+    footer {
+        font-size: 1.4rem;
+    }
+}

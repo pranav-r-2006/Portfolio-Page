@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Raleway', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: green;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+nav a:hover,
+nav a.active {
+    color: green;
+    border-bottom: 3px solid green;
+}
+
+section.education {
+    padding: 14rem 9% 5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: green;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid green;
+    transition: 0.3s ease;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+.btn:hover {
+    transform: scale3d(1.03);
+    background-color: green;
+    color: black;
+    box-shadow: 0 0 25px green;
+}
+
+.back-btn {
+    margin-bottom: 3rem;
+}
+
+.table-container {
+    margin-bottom: 4rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid green;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.6rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+    background-color: rgba(0, 255, 0, 0.1);
+    color: green;
+    font-weight: 600;
+}
+
+td {
+    color: white;
+}
+
+@media(max-width: 995px) {
+    table {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        font-size: 1.4rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 10rem;
+    }
+}
+
+
+
+/* Invisible trigger zone at bottom of page */
+.footer-trigger {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  /* Hidden footer initially */
+  .hidden-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease-in-out;
+    z-index: 9;
+    font-size: 1.4rem;
+  }
+  
+  /* Show footer on hover of trigger */
+  .footer-trigger:hover + .hidden-footer {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* Social icons styling */
+  .social-footer {
+    margin-top: 1rem;
+  }
+  
+  .social-footer a {
+    color: white;
+    margin: 0 0.8rem;
+    font-size: 2rem;
+    transition: color 0.3s;
+  }
+  
+  .social-footer a:hover {
+    color: green;
+  }
+
+
+
+  /* Mobile navigation stacking */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem 5%;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    nav a {
+        margin: 1rem 0;
+        font-size: 1.6rem;
+    }
+
+    .logo {
+        font-size: 2.4rem;
+    }
+}
+
+/* Make tables scrollable on very small screens */
+@media (max-width: 500px) {
+    .table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        width: 600px; /* will cause scroll on small screens */
+    }
+}
+
+/* Adjust spacing for smaller devices */
+@media (max-width: 768px) {
+    .btn {
+        padding: 0.8rem 2rem;
+        font-size: 1.4rem;
+    }
+
+    th, td {
+        padding: 1rem;
+        font-size: 1.4rem;
+    }
+
+    .hidden-footer {
+        font-size: 1.2rem;
+    }
+
+    .social-footer a {
+        font-size: 1.6rem;
+    }
+}
+
+

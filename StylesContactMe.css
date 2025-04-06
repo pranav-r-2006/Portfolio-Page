@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Raleway', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+    padding-top: 10rem;
+}
+
+/* --- NAVIGATION PANEL (from StylesHome.css) --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    filter: drop-shadow(10px);
+}
+
+.logo {
+    font-size: 3rem;
+    color: green;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: green;
+    border-bottom: 3px solid green;
+}
+
+@media (max-width: 995px) {
+    nav {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid green;
+        border-bottom: 3px solid green;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem;
+        background-color: black;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid green;
+    }
+}
+
+/* --- CONTACT SECTION --- */
+.contact-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-section h1 {
+    color: #00ff00;
+    font-size: 4.8rem;
+    text-shadow: 0 0 15px #00ff00;
+    margin-bottom: 4rem;
+}
+
+/* --- SOCIAL ICONS (from your preferred design) --- */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.circle {
+    background-color: black;
+    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px #00ff00;
+}
+
+.circle img {
+    width: 6rem;
+    height: 6rem;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #00ff00, 0 0 40px #00ff00;
+}
+
+/* --- FOOTER (Optional styling if needed) --- */
+footer {
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #888;
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .circle {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .circle img {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .contact-section h1 {
+        font-size: 3.6rem;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* Invisible trigger zone at bottom of page */
+.footer-trigger {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 20px;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  /* Hidden footer initially */
+  .hidden-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease-in-out;
+    z-index: 9;
+    font-size: 1.4rem;
+  }
+  
+  /* Show footer on hover of trigger */
+  .footer-trigger:hover + .hidden-footer {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* Social icons styling */
+  .social-footer {
+    margin-top: 1rem;
+  }
+  
+  .social-footer a {
+    color: white;
+    margin: 0 0.8rem;
+    font-size: 2rem;
+    transition: color 0.3s;
+  }
+  
+  .social-footer a:hover {
+    color: green;
+  }
+
+
+  @media (max-width: 480px) {
+    .contact-section h1 {
+        font-size: 2.8rem;
+    }
+
+    .circle {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .circle img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    nav a {
+        font-size: 1.6rem;
+        margin-left: 2rem;
+    }
+
+    .social-footer a {
+        font-size: 1.6rem;
+    }
+}
+
