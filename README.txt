@@ -66,7 +66,7 @@ Each section has its own unique stylesheet (e.g., `StylesHome.css`, `StylesSkill
 
 The website's visual and structural design is based on four main principles:
 
-1. **Simplicity with Elegance**: The use of a minimal color palette, animations, and clean fonts (Poppins) makes the site visually appealing without overloading the user.
+1. **Simplicity with Elegance**: The use of a minimal color palette, animations, and clean fonts (Raleway) makes the site visually appealing without overloading the user.
 2. **Consistency**: All sections follow a consistent visual language—typography, hover effects, transparency effects, and animation speeds are uniform throughout.
 3. **Accessibility & Usability**: All text is readable across devices. Interactive elements like buttons and progress bars have intuitive hover/click behaviors.
 4. **Responsiveness**: The design adapts gracefully across desktops, tablets, and smartphones.
@@ -78,9 +78,9 @@ The website's visual and structural design is based on four main principles:
 - **HTML5**: Core structure of all pages.
 - **CSS3**: Handles all design elements, transitions, animations, and responsiveness.
 - **Media Queries**: For ensuring device-specific responsiveness.
-- **Google Fonts (Poppins)**: For a modern, clean font aesthetic.
+- **Google Fonts (Raleway)**: For a modern, clean font aesthetic.
 - **Font Awesome / SVG Icons**: For social media links and navigation cues.
-- **MP4 Background Video**: A looping, muted video adds liveliness to the background.
+
 
 Note: This project does not use JavaScript intentionally, to keep everything fast and lightweight.
 
@@ -92,15 +92,15 @@ Note: This project does not use JavaScript intentionally, to keep everything fas
 Welcome Page (index.html)
 -------------------------
 
-- Features a full-screen looping and muted background video (`Background1.mp4`).
+
 - A centrally placed typing animation welcomes the user with the text:
   “Welcome to my Portfolio”.
 - Once the animation finishes, the text transforms into a glowing, enlarging button.
 - On hover, this button reacts visually and links the user to the Home Page.
-- Uses Poppins font and a focused layout to engage users immediately.
+- Uses Raleway font and a focused layout to engage users immediately.
 
 --------------------
-Home Page (home.html)
+Home Page (index.html)
 --------------------
 
 - Retains the same video background and Poppins font for design consistency.
